@@ -25,11 +25,11 @@ class StopSeeder extends Seeder
             ],
             [
                 'id'=>3,
-                'stop_name' => 'Banha',
+                'stop_name' => 'Tanta',
             ],
             [
                 'id'=>4,
-                'stop_name' => 'Tanta',
+                'stop_name' => 'Banha',
             ],
             [
                 'id'=>5,

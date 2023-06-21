@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Api\StopsController;
+use App\Http\Controllers\Api\TripStopsController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -17,3 +19,6 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+// Route::post('/GetData',[StopsController::class,"getStopId"]);
+Route::get('/GetData/{src}/{dest}',[TripStopsController::class,"GetListOfTrips"]);

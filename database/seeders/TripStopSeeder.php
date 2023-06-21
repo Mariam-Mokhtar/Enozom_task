@@ -76,12 +76,12 @@ class TripStopSeeder extends Seeder
             ],
             [
                 'trip_id'=>5,
-                'stop_id' => 3,
+                'stop_id' => 4,
                 'stop_time'=>"7:30"
             ],
             [
                 'trip_id'=>5,
-                'stop_id' => 4,
+                'stop_id' => 3,
                 'stop_time'=>"8:30"
             ],
             [
@@ -100,7 +100,7 @@ class TripStopSeeder extends Seeder
             ],
             [
                 'trip_id'=>6,
-                'stop_id' => 4,
+                'stop_id' => 3,
                 'stop_time'=>"10:15"
             ],
             [
