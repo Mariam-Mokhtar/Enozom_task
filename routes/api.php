@@ -20,5 +20,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-// Route::post('/GetData',[StopsController::class,"getStopId"]);
 Route::get('/GetData/{src}/{dest}',[TripStopsController::class,"GetListOfTrips"]);
