@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('stops', function (Blueprint $table) {
             $table->id();
             $table->string("stop_name");
-            $table->time("stop_time");
             $table->timestamps();
         });
     }

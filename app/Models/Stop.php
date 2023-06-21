@@ -7,9 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Stop extends Model
 {
-    protected $fillable=['stop-name','stop_time'];
-    public function tripStops()
-    {
-        return $this->hasMany(TripStop::class);
-    }
+    protected $fillable=['stop_name'];
 }

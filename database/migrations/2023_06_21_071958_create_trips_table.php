@@ -1,10 +1,9 @@
 <?php
-
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
+class CreateTripsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,9 +11,13 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('trips', function (Blueprint $table) {
-            $table->id(); //trip_id
-            $table->string("source");
-            $table->string("destaination");
+            $table->id();
+            $table->string("trip_name");
+            $table->unsignedBigInteger("train_id");
+            $table->foreign("train_id")
+                  ->references("id")
+                  ->on("trains");
+
             $table->timestamps();
         });
     }
@@ -26,4 +29,4 @@ return new class extends Migration
     {
         Schema::dropIfExists('trips');
     }
-};
+}

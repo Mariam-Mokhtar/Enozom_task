@@ -7,20 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class TripStops extends Model
 {
-    protected $fillable=['train_id','trip_id','stop_id'];
+    protected $fillable=['train_id','stop_id','stop_time'];
 
-    public function train()
-    {
-        return $this->belongsTo(Train::class);
-    }
-
-    public function trip()
-    {
-        return $this->belongsTo(Trip::class);
-    }
-
-    public function stop()
-    {
-        return $this->belongsTo(Stop::class);
-    }
 }

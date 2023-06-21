@@ -8,9 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Train extends Model
 {
     protected $fillable=['train_name'];
-    
-    public function tripStops()
+
+    public function trips()
     {
-        return $this->hasMany(TripStop::class);
+        return $this->hasMany(Trip::class);
     }
 }
